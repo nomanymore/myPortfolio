@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* other styles */
+.icon-size {
+    font-size: 1.25rem; /* Or any other size you prefer */
+  }
