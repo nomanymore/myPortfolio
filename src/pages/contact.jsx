@@ -71,9 +71,7 @@ export default function Contact() {
                                 <div className="my-2 w-full lg:w-1/4">
                                     <button type="submit" className="uppercase text-sm font-bold tracking-wide bg-red-900 hover:bg-opacity-80 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">Send Message</button>
                                 </div>
-                                {/* Error Message */}
                                 {errorMessage && <p className="text-red-500">{errorMessage}</p>}
-                                {/* Submission Success Message */}
                                 {submitted && <p className="text-green-500">Message sent successfully!</p>}
                             </div>
                         </div>

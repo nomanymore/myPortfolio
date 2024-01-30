@@ -21,7 +21,6 @@ export default function Layout({ children }) {
     <>
       <nav className="bg-black text-white px-6 py-4 z-50">
         <div className="flex justify-between items-center">
-          {/* Logo */}
           <div>
             <Link href="/" passHref>
               <img src="/logoicon.ico" alt="Logo" className="h-14 cursor-pointer" />
@@ -30,7 +29,6 @@ export default function Layout({ children }) {
 
           {/* Navigation Menu for Larger Screens */}
           <div className={`hidden md:flex flex-grow items-center justify-end ${showSearch ? 'hidden' : 'flex'}`}>
-            {/* Navigation Links */}
             <div className="space-x-4">
               <Link href="/about" passHref><span className={`hover:text-red-500 cursor-pointer font-semibold ${cinzel.className}`}>About</span></Link>
               <Link href="/experience" passHref><span className={`hover:text-red-500 cursor-pointer font-semibold ${cinzel.className}`}>Experience</span></Link>
@@ -39,7 +37,6 @@ export default function Layout({ children }) {
             </div>
           </div>
 
-          {/* Right Container for Search Icon and Hamburger Menu */}
           <div className="flex items-center">
             {/* Search Icon and Input */}
             {!showSearch ? (

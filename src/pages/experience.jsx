@@ -6,22 +6,21 @@ const cinzel = Cinzel({weight: "400", subsets: ['latin']});
 export default function Experience() {
     return (
         <>
-            {/* Top Background Image */}
+          
             <div className="relative h-screen w-full overflow-auto bg-cover bg-center" style={{ backgroundImage: 'url(/images/Banner2.png)',backgroundAttachment: 'fixed' }}>
-
-                {/* Overlay Content */}
+              
                 <div className="absolute top-0 left-0 right-0 bottom-0 z-10 flex flex-col lg:flex-row ">
-                    {/* Left Column - Experience Image */}
+                    {/* Experience Image */}
                     <div className="w-full lg:w-1/3 h-1/3 flex flex-col items-center justify-center ">
                         <h1 className={`text-5xl font-bold mb-4 text-white ${cinzel.className}`}>Experience</h1>
-                        <a href="/Victoria_Shmakov_Resume 2023.pdf" download>
+                        <a href="/CV IT 2024.pdf" download>
                             <button className={`bg-red-900 hover:bg-opacity-80 text-white font-bold text-lg py-2 px-4 rounded-md`}>
                                 Download Resume
                             </button>
                         </a>
                     </div>
 
-                    {/* Right Column - Heading and Download Button */}
+                    {/*Heading and Download Button */}
                     
                     <div className="w-full h-full lg:w-2/3  flex items-center justify-center opacity-90 rounded-2xl shadow-2xl overflow-auto mr-4">
                         <Image

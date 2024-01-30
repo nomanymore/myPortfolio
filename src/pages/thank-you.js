@@ -1,13 +1,38 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { Cinzel } from 'next/font/google';
 const cinzel = Cinzel({weight: "400", subsets: ['latin']});
 import { Icon } from '@iconify/react';
 import { useState } from 'react';
 
-export default function Experience() {
+export default function Samples() {
     // State to track which section is selected
     const [selectedSection, setSelectedSection] = useState(null);
+    const [activeSlide, setActiveSlide] = useState(0);
+
+    const images = [ 
+    "/images/codeflex/Codeflex1.png",
+    "/images/codeflex/Codeflex2.png",
+    "/images/codeflex/Codeflex3.png",
+    "/images/codeflex/Codeflex4.png",
+    "/images/codeflex/Codeflex5.png",
+    "/images/codeflex/Codeflex6.png",
+    "/images/codeflex/Codeflex7.png",
+    "/images/codeflex/Codeflex8.png"
+    ];
+
+    // Function to handle slide change
+    const handleSlideChange = (increment) => {
+        setActiveSlide((prevSlide) => {
+            let newSlide = prevSlide + increment;
+            if (newSlide < 0) {
+                newSlide = images.length - 1;
+            } else if (newSlide >= images.length) {
+                newSlide = 0;
+            }
+            return newSlide;
+        });
+    };
+    
 
     const techIcons = {
         'React': { icon:'skill-icons:react-dark', url:'https://react.dev/' },
@@ -31,15 +56,11 @@ export default function Experience() {
         'ASP.NET': { icon:'devicon:dotnetcore', url:'https://dotnet.microsoft.com/en-us/' },
     };
 
-    let Tech = ['React','Next.js', 'php', 'Tailwind CSS', 'MongoDB', 'Python', 'HTML', 'CSS', 'JavaScript', 'Java', 'C#', 'MySQL', 'Vercel', 'Power BI', 'Tableau', 'SASS', 'WordPress', 'Docker', 'ASP.NET' ]
-
     return (
         <>
             {/* Top Background Image with Title and Buttons */}
             <div className="relative h-screen w-full overflow-auto bg-cover bg-center" style={{ backgroundImage: 'url(/images/Banner2.png)',backgroundAttachment: 'fixed' }}>
-                {/* Overlay Container for Title and Buttons */}
                 <div className="absolute inset-0 z-20 flex flex-col">
-                    {/* Title at the top 1/4 of the screen */}
                     <div className="flex flex-col items-center justify-start pt-8 h-1/4">
                         <h1 className={`text-5xl font-bold text-white ${cinzel.className}`}>Samples</h1>
                     </div>
@@ -55,92 +76,50 @@ export default function Experience() {
                         <button onClick={() => setSelectedSection('pm')} className="ml-2 uppercase text-sm font-bold tracking-wide bg-red-900 hover:bg-opacity-80 text-gray-100 p-3 rounded-lg w-1/4 focus:outline-none focus:shadow-outline">
                             Project Management
                         </button>
+                        
                     </div>
                 </div>
 
-                    {/* Section Content */}
+                {/* Section Content */}
+                
                 <div className="absolute top-1/4 w-full z-10 p-4 mt-20">
+                
                     {selectedSection === 'web' && (
                         <div className="flex flex-wrap -mx-2">
+                            <button onClick={() => alert('Test Button Clicked')}>Test Button</button>
                             {/* First Project Card */}
                             <div className="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
-                                <div className="bg-white bg-opacity-90 rounded-2xl shadow-main p-8">
+                                <div className="bg-white bg-opacity-90 rounded-2xl p-8">
                                     <div className="flex flex-row items-center">
                                         <div className="w-1/2">
-                                            <Image className="rounded-md" src="/images/TechRoster.png" width="150" height="75" alt="Project Image" />
+                                            <img className="rounded-md" src="/images/TechRoster.png" alt="Project Image"  />
                                         </div>
                                         <div className="w-1/2 px-2">
-                                            <div className={`font-black text-xl text-red-800 mb-2 ${cinzel.className}`}>Project Name</div>
+                                            <div className={`font-black text-xl text-red-800 mb-2 ${cinzel.className}`}>Technology Roster</div>
                                             <p className="text-gray-700 text-base">
-                                                Brief description here.
+                                                A simple full stack app built with Next.js, Tailwind CSS, and MongoDB, pulling technology and course info form an API.
                                             </p>
                                         </div>
                                     </div>
                                     <div className="pt-4">
                                         <div className="font-bold text-xl mb-2">Built with:</div>
-                                        {['React', 'Next.js', 'Tailwind CSS'].map((tech) => (
-                                            <a key={tech} href={techIcons[tech].url} className="inline-block bg-gray-200 rounded-full p-2 mr-2 mb-2 hover:bg-gray-700 hover:bg-opacity-90" target="_blank" rel="noopener noreferrer" title={tech}>
-                                                <Icon icon={techIcons[tech].icon} width="24" height="24" />
-                                            </a>
+                                        {['Docker', 'Next.js', 'Tailwind CSS'].map((tech) => (
+                                        <a key={tech} href={techIcons[tech].url} className="inline-block bg-gray-200 rounded-full p-2 hover:bg-gray-700 hover:bg-opacity-90 hover:cursor-pointer  " target="_blank" rel="noopener noreferrer" title={tech}>
+                                            <Icon icon={techIcons[tech].icon} width="24" height="24" />
+                                        </a>
                                         ))}
                                     </div>
                                 </div>
                             </div>
-                            <div className="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
-                                <div className="bg-white bg-opacity-90 rounded-2xl shadow-main p-8">
-                                    <div className="flex flex-row items-center">
-                                        <div className="w-1/2">
-                                            <Image className="rounded-md" src="/images/TechRoster.png" width="150" height="75" alt="Project Image" />
-                                        </div>
-                                        <div className="w-1/2 px-2">
-                                            <div className={`font-black text-xl text-red-800 mb-2 ${cinzel.className}`}>Project Name</div>
-                                            <p className="text-gray-700 text-base">
-                                                Brief description here.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="pt-4">
-                                        <div className="font-bold text-xl mb-2">Built with:</div>
-                                        {['React', 'Next.js', 'Tailwind CSS'].map((tech) => (
-                                            <a key={tech} href={techIcons[tech].url} className="inline-block bg-gray-200 rounded-full p-2 mr-2 mb-2 hover:bg-gray-700 hover:bg-opacity-90" target="_blank" rel="noopener noreferrer" title={tech}>
-                                                <Icon icon={techIcons[tech].icon} width="24" height="24" />
-                                            </a>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
-                                <div className="bg-white bg-opacity-90 rounded-2xl shadow-main p-8">
-                                    <div className="flex flex-row items-center">
-                                        <div className="w-1/2">
-                                            <Image className="rounded-md" src="/images/TechRoster.png" width="150" height="75" alt="Project Image" />
-                                        </div>
-                                        <div className="w-1/2 px-2">
-                                            <div className={`font-black text-xl text-red-800 mb-2 ${cinzel.className}`}>Project Name</div>
-                                            <p className="text-gray-700 text-base">
-                                                Brief description here.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="pt-4">
-                                        <div className="font-bold text-xl mb-2">Built with:</div>
-                                        {['React', 'Next.js', 'Tailwind CSS'].map((tech) => (
-                                            <a key={tech} href={techIcons[tech].url} className="inline-block bg-gray-200 rounded-full p-2 mr-2 mb-2 hover:bg-gray-700 hover:bg-opacity-90" target="_blank" rel="noopener noreferrer" title={tech}>
-                                                <Icon icon={techIcons[tech].icon} width="24" height="24" />
-                                            </a>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>                    
-
-
-
+                            {/* Second Project Card */}
                         </div>
                     )}
 
                         
                     {selectedSection === 'data' && (
+                        
                      <div className="bg-white bg-opacity-90 rounded-2xl shadow-main p-8 md:px-12 shadow-2xl max-w-sm max-h-screen">
+                        
                      <Image className="rounded-md border-4 border-black border-opacity-80" src="/images/TechRoster.png" width="300" height="150" alt="Sunset in the mountains"
                      />
                      <div className="px-6 py-4">
@@ -149,6 +128,7 @@ export default function Experience() {
                          Simple Full-Stack web app, using MongoDB API to retrieve and display a technology stack and show the courses in which they are required.
                        </p>
                      </div>
+                     
                      <div className="px-6 pt-4 pb-2">
                      <div className="font-bold text-xl mb-2">Built with:</div>
                      {['Tailwind CSS', 'Next.js', 'Docker', 'MongoDB'].map((tech) => (
@@ -160,29 +140,45 @@ export default function Experience() {
                       
                      </div>
                     )}
-                    {selectedSection === 'pm' && (
-                     <div className="bg-white bg-opacity-90 rounded-2xl shadow-main p-8 md:px-12 shadow-2xl max-w-sm max-h-screen">
-                     <Image className="rounded-md border-4 border-black border-opacity-80" src="/images/TechRoster.png" width="300" height="150" alt="Sunset in the mountains"
-                     />
-                     <div className="px-6 py-4">
-                       <div className={`font-black text-xl text-red-800 mb-2 ${cinzel.className}`}>Technology Roster</div>
-                       <p className="text-gray-700 text-base">
-                         Simple Full-Stack web app, using MongoDB API to retrieve and display a technology stack and show the courses in which they are required.
-                       </p>
-                     </div>
-                     <div className="px-6 pt-4 pb-2">
-                     <div className="font-bold text-xl mb-2">Built with:</div>
-                     {['Tailwind CSS', 'Next.js', 'Docker', 'MongoDB'].map((tech) => (
-                              <a key={tech} href={techIcons[tech].url} className="inline-block bg-gray-200 rounded-full p-2 mr-2 mb-2 hover:bg-gray-700 hover:bg-opacity-90" target="_blank" rel="noopener noreferrer" title={tech}>
-                                  <Icon icon={techIcons[tech].icon} width="24" height="24" />
-                              </a>
-                          ))}
-                       </div>
-                     </div>
-                    )}
-                </div>
-            </div>
 
+                    {selectedSection === 'pm' && (
+                        
+                    <div className="relative w-1/2">
+                        
+                        {/* Carousel */}
+                        <div className="relative h-56 overflow-hidden rounded-lg">
+                            {/* Images */}
+                            {images.map((src, index) => (
+                                <img 
+                                    key={src} 
+                                    src={src} 
+                                    className={`relative w-full h-full object-cover transition-opacity duration-700 ease-in-out ${index === activeSlide ? 'opacity-100' : 'opacity-0'}`}
+                                    alt={`Slide ${index + 1}`} 
+                                />
+                            ))}
+                        </div>
+
+                        {/* Navigation Buttons */}
+                        <div className="relative flex justify-between items-center" style={{ zIndex: 99 }}>
+                            <button 
+                                onClick={() => handleSlideChange(activeSlide - 1)}
+                                className="bg-white bg-opacity-50 rounded-full p-2 text-black"
+                                aria-label="Previous Slide"
+                                >
+                                &#10094; 
+                            </button>
+                            <button 
+                                onClick={() => alert('Prev clicked')}
+                                className="bg-white bg-opacity-50 rounded-full p-2 text-black "
+                                aria-label="Next Slide"
+                                >
+                                &#10095;
+                            </button>
+                        </div>
+                    </div>
+                )}
+            </div>
+        </div>
         </>
     );
 }
