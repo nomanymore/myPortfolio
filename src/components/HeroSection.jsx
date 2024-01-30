@@ -42,7 +42,7 @@ export default function HeroSection() {
         />
 
         {/* Navigation Images */}
-        <div className="absolute inset-0 flex justify-around items-center p-4 z-20 overflow-hidden">
+        <div className="absolute inset-0 flex justify-around  items-center p-4 z-20 overflow-hidden">
         {navigationItems.map((item, index) => (
           <Link key={index} href={item.href} passHref>
             <div className="sm:w-28 md:w-32 lg:w-48 p-2 relative cursor-pointer group">
@@ -54,10 +54,10 @@ export default function HeroSection() {
                 height={100}
                 className="rounded-xl transition duration-300"
               />
-              <div className="absolute inset-0 rounded-xl bg-white bg-opacity-0 hover:bg-opacity-10 transition duration-300"></div>
+              <div className="absolute inset-0 rounded-xl bg-white bg-opacity-10 transition duration-300"></div>
 
               {/* Text Caption */}
-              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-1 rounded-b-xl text-center opacity-0 group-hover:opacity-100 transition duration-300 overflow-hidden">
+              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-1 rounded-b-xl text-center  overflow-hidden">
                 <span className="text-white text-sm font-bold">{item.name}</span>
               </div>
             </div>

@@ -46,17 +46,17 @@ export default function Contact() {
             <Head>
                 <title>Contact - VS Data & Development</title>
             </Head>
-            <div className="bg-cover bg-center min-h-screen w-full overflow-auto" style={{ backgroundImage: `url('/images/BannerLong.png')` }}>
+            <div className="bg-cover bg-center min-h-screen w-full overflow-auto" style={{ backgroundImage: 'url(/images/Banner2.png)',backgroundAttachment: 'fixed' }}>
                 <div className="flex flex-col lg:flex-row p-8 lg:mt-12">
-                    <div className="w-full lg:w-1/4 flex flex-col items-center lg:items-start mb-8 lg:mb-0">
+                <div className="w-full lg:w-1/4 flex flex-col items-center lg:items-start mb-8 lg:mb-0 title-section">
                         <h1 className={`font-bold uppercase text-5xl mb-4 text-white ${cinzel.className}`}>Send me a <br /> message!</h1>
                     </div>
                    
-                    <form ref={formRef} onSubmit={handleSubmit} action="https://formspree.io/f/mbjnjpko" method="POST">
+                    <form ref={formRef} onSubmit={handleSubmit} action="https://formspree.io/f/mbjnjpko" method="POST" className="form-container">
                         <input type="hidden" name="_next" value="/thank-you" />
-                            <div className="w-full lg:w-1/2 xl:w-2/3 flex flex-col items-center mb-8 lg:mb-0">
+                        <div className="w-full flex flex-col items-center mb-8 lg:mb-0">
                             <div className="bg-gray-800 bg-opacity-90 p-8 md:px-12 rounded-2xl shadow-2xl w-full">
-                            {/* Form Fields */}
+                                            
                             <div className='text-white'><span className='text-xl'>Ready to bring your digital vision to life?<br/></span>
                             Whether you need a cutting-edge front-end design, meticulous quality assurance and testing, or insightful data analytics, I'm here to turn your ideas into reality. Let's connect and create something amazing together – your web aspirations are just a message away!</div>
                             <div className="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
@@ -80,7 +80,7 @@ export default function Contact() {
                     </form>
 
                     {/* Right Column - Contact Cards */}
-                    <div className="w-full sm:flex-col lg:w-1/4 flex flex-col items-center ">
+                   <div className="w-full lg:w-1/4 flex flex-col items-center contact-cards-section">
                         {/* Email Card */}
                         <div className="flex flex-col items-center gap-3 px-8 my-4 py-10 bg-white bg-opacity-90 rounded-2xl shadow-main">
                             <Icon icon="clarity:email-line" width="36" height="36" />
@@ -102,3 +102,5 @@ export default function Contact() {
         </>
     );
 }
+
+

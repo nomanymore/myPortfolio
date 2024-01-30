@@ -19,7 +19,7 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <nav className="bg-black text-white px-6 py-4">
+      <nav className="bg-black text-white px-6 py-4 z-50">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div>
@@ -85,7 +85,7 @@ export default function Layout({ children }) {
       <main>{children}</main>
 
  {/* Footer */}
- <footer className="bg-black text-white p-4">
+ <footer className="bg-black text-white p-4 z-50">
         <div className="container mx-auto flex justify-between items-center px-4 md:px-6">
           {/* Copyright */}
           <p className="text-xs sm:text-sm">&copy; {new Date().getFullYear()} VS Development and Data. All rights reserved.</p>

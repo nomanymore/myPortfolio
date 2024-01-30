@@ -2,7 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+
 /* other styles */
 .icon-size {
-    font-size: 1.25rem; /* Or any other size you prefer */
+    font-size: 1.25rem;
   }
+
+
+
+
+/* Ensure the form container takes up the full half width */
+@media (min-width: 1024px) { 
+  .form-container {
+    width: 50%; 
+    max-width: 50%; 
+  }
+}
+
+.form-container, .title-section, .contact-cards-section {
+  padding: 0;
+  margin: 0;
+}
+
