@@ -24,7 +24,7 @@ export default function Experience() {
                     
                     <div className="w-full h-full lg:w-2/3  flex items-center justify-center opacity-90 rounded-2xl shadow-2xl overflow-auto mr-4">
                         <Image
-                            src="/images/webp/exper2023.webp"
+                            src="/images/webp/Work experience IT2.webp"
                             alt="Experience"
                             layout="responsive"
                             width={1000}

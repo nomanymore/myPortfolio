@@ -84,7 +84,6 @@ export default function Layout({ children }) {
  {/* Footer */}
  <footer className="bg-black text-white p-4 z-50">
         <div className="container mx-auto flex justify-between items-center px-4 md:px-6">
-          {/* Copyright */}
           <p className="text-xs sm:text-sm">&copy; {new Date().getFullYear()} VS Development and Data. All rights reserved.</p>
 
           {/* Social Icons */}

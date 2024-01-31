@@ -13,11 +13,11 @@ export default function Experience() {
                         <h1 className={`text-5xl font-bold text-white ${cinzel.className}`}>About Me</h1>
                         <div className="w-full max-w-xs lg:max-w-none mb-4 sm:mb-0"> 
                             <Image
-                                src="/images/webp/headshot.webp"
+                                src="/images/webp/Profile.webp"
                                 alt="portrait photo of me"
                                 width={250}
                                 height={100}
-                                className='ml-10'                         
+                                className='xl:ml-20 ml-10 lg:ml-5 rounded-xl opacity-90 z-10 mt-5'                         
                             />
                         </div>
                     </div>
