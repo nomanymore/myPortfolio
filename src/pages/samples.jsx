@@ -94,7 +94,7 @@ export default function Samples() {
                             <p className="text-gray-700 mt-2">A simple full stack app built with Next.js, Tailwind CSS, and MongoDB, pulling technology and course info form an API.</p>
                             <p className='text-black font-bold text-lg mt-2'>Built with:</p>
                             <div className="flex justify-start flex-wrap mt-4"> 
-                                {['Docker', 'Next.js', 'Tailwind CSS'].map((tech, index) => (
+                                {['Docker', 'Next.js', 'Tailwind CSS', 'Vercel'].map((tech, index) => (
                                     <a key={index} href={techIcons[tech].url} className="m-1 bg-gray-200 hover:bg-gray-300 rounded-full px-4 py-1 text-sm" target="_blank" rel="noopener noreferrer" title={tech}>
                                         <Icon icon={techIcons[tech].icon} width="20" height="20" />
                                     </a>
@@ -108,19 +108,19 @@ export default function Samples() {
                             <p className="text-gray-700 mt-2">My Very first complete "portfolio" done with only plain HTML/CSS as part of the learning process for web development and understanding the basics.</p>
                             <p className='text-black font-bold text-lg mt-2'>Built with:</p>
                             <div className="flex justify-start flex-wrap mt-4">
-                                {['HTML', 'CSS'].map((tech, index) => (
+                                {['HTML', 'CSS', 'Vercel'].map((tech, index) => (
                                     <a key={index} href={techIcons[tech].url} className="m-1 bg-gray-200 hover:bg-gray-300 rounded-full px-4 py-1 text-sm" target="_blank" rel="noopener noreferrer" title={tech}>
                                         <Icon icon={techIcons[tech].icon} width="20" height="20" />
                                     </a>
                                 ))}
                             </div>
                         </div>
-                        <div className="bg-white p-6 m-4 rounded-xl shadow-lg w-80 ">
-                            <img src="/images/TechRoster.png" alt="Project" className="w-full h-40 object-cover rounded" />
-                            <h3 className="text-2xl font-bold mt-2">Project Name</h3>
-                            <p className="text-gray-700 mt-2">Project description goes here.</p>
+                        <div className="bg-white bg-opacity-90 p-6 m-4 rounded-xl shadow-lg w-80 ">
+                        <a href='https://photo-album-fullstack.vercel.app/' target='_blank'><img src="/images/webp/photoalbum.webp" alt="Screencap of Project Photo Album" className="w-full h-40 object-cover rounded border-2 border-gray-600" /></a>
+                            <h3 className="text-2xl font-bold mt-2">Photo Album</h3>
+                            <p className="text-gray-700 mt-2">Full stack photo album, retrieving photos and related info from a MongoDB database, commenting, and jump feature. </p>
                             <div className="flex justify-start flex-wrap mt-4">
-                                {['React', 'Next.js', 'Tailwind CSS'].map((tech, index) => (
+                                {['MongoDB', 'Next.js', 'Tailwind CSS', 'Docker', 'Vercel'].map((tech, index) => (
                                     <a key={index} href={techIcons[tech].url} className="m-1 bg-gray-200 hover:bg-gray-300 rounded-full px-4 py-1 text-sm" target="_blank" rel="noreferrer">
                                         <Icon icon={techIcons[tech].icon} width="20" height="20" />
                                     </a>
