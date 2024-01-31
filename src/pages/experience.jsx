@@ -7,7 +7,7 @@ export default function Experience() {
     return (
         <>
           
-            <div className="relative h-screen w-full overflow-auto bg-cover bg-center" style={{ backgroundImage: 'url(/images/Banner2.png)',backgroundAttachment: 'fixed' }}>
+            <div className="relative h-screen w-full overflow-auto bg-cover bg-center" style={{ backgroundImage: 'url(/images/webp/Banner2.webp)',backgroundAttachment: 'fixed' }}>
               
                 <div className="absolute top-0 left-0 right-0 bottom-0 z-10 flex flex-col lg:flex-row ">
                     {/* Experience Image */}
@@ -24,7 +24,7 @@ export default function Experience() {
                     
                     <div className="w-full h-full lg:w-2/3  flex items-center justify-center opacity-90 rounded-2xl shadow-2xl overflow-auto mr-4">
                         <Image
-                            src="/images/exper2023.png"
+                            src="/images/webp/exper2023.webp"
                             alt="Experience"
                             layout="responsive"
                             width={1000}

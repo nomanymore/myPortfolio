@@ -17,14 +17,23 @@ export default function HeroSection() {
       {/* Top Background Image */}
       <div className="relative h-screen w-full overflow-hidden">
         <Image
-          src="/images/Banner.png"
+          src="/images/webp/Banner.webp"
           alt="Top Hero Background"
           layout="fill"
           className="object-cover object-center"
         />
-
-        {/* Overlay Content */} 
-        <div className="absolute top-0 left-0 right-0 bottom-0 z-10 flex items-center justify-center bg-black bg-opacity-50 overflow-hidden">
+        
+          <div className="absolute top-0 left-0 right-0 bottom-0 z-10 flex flex-col items-center justify-center bg-black bg-opacity-50 overflow-hidden">
+          {/* Image Above the Title */}
+          <div className="mb-4">
+            <Image
+              src="/images/webp/Profile.webp"
+              alt="photo of me"
+              width={150}
+              height={84.38}
+              className="rounded-xl opacity-90 z-10"
+            />
+          </div>
           <div className="text-center text-white">
             <h1 className="text-5xl font-bold mb-4">Victoria Shmakov</h1>
             <p className="text-xl">Development and Data</p>
@@ -33,9 +42,9 @@ export default function HeroSection() {
       </div>
 
       {/* Bottom Banner Image */}
-      <div className="relative h-48 w-full overflow-hidden">
+      <div className="relative h-48 w-full overflow-auto">
         <Image
-          src="/images/BannerBottom.png"
+          src="/images/webp/BannerBottom.webp"
           alt="Bottom Hero Background"
           layout="fill"
           className="object-cover object-center"
@@ -47,7 +56,7 @@ export default function HeroSection() {
           <Link key={index} href={item.href} passHref>
             <div className="sm:w-28 md:w-32 lg:w-48 p-2 relative cursor-pointer group">
               <Image
-                src={`/images/${item.name}.png`}
+                src={`/images/webp/${item.name}.webp`}
                 alt={item.name}
                 layout="responsive"
                 width={100}

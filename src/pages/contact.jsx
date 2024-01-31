@@ -46,7 +46,7 @@ export default function Contact() {
             <Head>
                 <title>Contact - VS Data & Development</title>
             </Head>
-            <div className="bg-cover bg-center min-h-screen w-full overflow-auto" style={{ backgroundImage: 'url(/images/Banner2.png)',backgroundAttachment: 'fixed' }}>
+            <div className="bg-cover bg-center min-h-screen w-full overflow-auto" style={{ backgroundImage: 'url(/images/webp/Banner2.webp)',backgroundAttachment: 'fixed' }}>
                 <div className="flex flex-col lg:flex-row p-8 lg:mt-12">
                 <div className="w-full lg:w-1/4 flex flex-col items-center lg:items-start mb-8 lg:mb-0 title-section">
                         <h1 className={`font-bold uppercase text-5xl mb-4 text-white ${cinzel.className}`}>Send me a <br /> message!</h1>

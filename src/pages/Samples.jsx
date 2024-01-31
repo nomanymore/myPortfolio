@@ -10,14 +10,14 @@ export default function Samples() {
 
     // List of images for the carousel
     const images = [
-        "/images/codeflex/Codeflex1.png",
-        "/images/codeflex/Codeflex2.png",
-        "/images/codeflex/Codeflex3.png",
-        "/images/codeflex/Codeflex4.png",
-        "/images/codeflex/Codeflex5.png",
-        "/images/codeflex/Codeflex6.png",
-        "/images/codeflex/Codeflex7.png",
-        "/images/codeflex/Codeflex8.png"
+        "/images/webp/Codeflex1.webp",
+        "/images/webp/Codeflex2.webp",
+        "/images/webp/Codeflex3.webp",
+        "/images/webp/Codeflex4.webp",
+        "/images/webp/Codeflex5.webp",
+        "/images/webp/Codeflex6.webp",
+        "/images/webp/Codeflex7.webp",
+        "/images/webp/Codeflex8.webp"
     ];
 
     // list of icons and tech items for skills
@@ -57,7 +57,7 @@ export default function Samples() {
 
     return (
         <>
-            <div className="relative h-screen w-full bg-cover bg-center overflow-auto" style={{ backgroundImage: 'url(/images/Banner2.png)', backgroundAttachment: 'fixed' }}>
+            <div className="relative h-screen w-full bg-cover bg-center overflow-auto" style={{ backgroundImage: 'url(/images/webp/Banner2.webp)', backgroundAttachment: 'fixed' }}>
                 
                 <div className="absolute top-0 left-0 right-0 z-20 flex flex-col items-center justify-center pt-8">
                     <h1 className={`text-5xl font-bold text-white mb-10 ${cinzel.className}`}>Samples</h1>
@@ -136,6 +136,19 @@ export default function Samples() {
 
                 {selectedSection === 'pm' && (
                     <div className="w-3/4 mx-auto">
+
+                        <div className="bg-white bg-opacity-60 rounded-lg p-4">
+                            <p className="text-black text-center font-bold">
+                                Codeflex 2023 was a Hackaton event organized by myself and 4 other NSCC IT students,
+                                which saw 10 teams of students compete to complete a series of challenges in MySQL, Python and HTML/CSS 
+                                for a chance to win a $100 gift card and bragging rights that they've correctly completed approximately 30 challenges in less than 5 hours
+                                with absolutely no web access!
+                                The event organizing consisted of securing funding, organizing food and drinks, advertising, booking the space as well as creating, testing and setting up the environment for the challenges.
+                            </p>
+                        </div>
+
+
+
                         {/* Carousel */}
                         <div className="relative bg-black bg-opacity-50 rounded-lg p-4 mb-4 mt-3">
                             <div className="relative h-56 md:h-96">
@@ -171,15 +184,7 @@ export default function Samples() {
                         </div>
 
                         {/* Explanation text */}
-                        <div className="bg-white bg-opacity-60 rounded-lg p-4">
-                            <p className="text-black text-center font-bold">
-                                Codeflex 2024 was a Hackaton event organized by myself and 4 other NSCC IT students,
-                                which saw 10 teams of students compete to complete a series of challenges in MySQL, Python and HTML/CSS 
-                                for a chance to win a $100 gift card and bragging rights that they've correctly completed approximately 30 challenges in less than 5 hours
-                                with absolutely no web access!
-                                The event organizing consisted of securing funding, organizing food and drinks, advertising, booking the space as well as creating, testing and setting up the environment for the challenges.
-                            </p>
-                        </div>
+                        
                     </div>
                 )}
 
