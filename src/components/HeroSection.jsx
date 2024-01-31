@@ -35,7 +35,7 @@ export default function HeroSection() {
             />
           </div>
           <div className="text-center text-white">
-            <h1 className="text-5xl font-bold mb-4">Victoria Shmakov 5</h1>
+            <h1 className="text-5xl font-bold mb-4">Victoria Shmakov 3</h1>
             <p className="text-xl">Development and Data</p>
           </div>
         </div>

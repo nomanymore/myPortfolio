@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Cinzel } from 'next/font/google';
 const cinzel = Cinzel({weight: "400", subsets: ['latin']});
 
-export default function Experience() {
+export default function About() {
     return (
         <>
             <div className="relative h-screen w-full overflow-auto bg-cover bg-center" style={{ backgroundImage: 'url(/images/webp/Banner2.webp)', backgroundAttachment: 'fixed' }}>
