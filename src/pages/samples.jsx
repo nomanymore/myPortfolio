@@ -4,6 +4,7 @@ const cinzel = Cinzel({weight: "400", subsets: ['latin']});
 import { Icon } from '@iconify/react';
 import { useState } from 'react';
 import Link from 'next/link';
+import Head from 'next/head';
 
 export default function Samples() {
     const [selectedSection, setSelectedSection] = useState(null);
@@ -58,26 +59,29 @@ export default function Samples() {
 
     return (
         <>
+            <Head>
+                <title>Samples - VS Data & Development</title>
+            </Head>
             <div className="relative h-screen w-full bg-cover bg-center overflow-auto" style={{ backgroundImage: 'url(/images/webp/Banner2.webp)', backgroundAttachment: 'fixed' }}>
                 
                 <div className="absolute top-0 left-0 right-0 z-20 flex flex-col items-center justify-center pt-8">
                     <h1 className={`text-5xl font-bold text-white mb-10 ${cinzel.className}`}>Samples</h1>
-                        <div className="flex-grow flex items-start justify-center space-x-4">
+                        <div className="flex items-center justify-between w-3/4 max-w-4xl">
                         <button
                             onClick={() => setSelectedSection('web')} 
-                            className={`uppercase text-sm font-bold tracking-wide p-3 rounded-lg w-1/4 focus:outline-none focus:shadow-outline 
+                            className={`uppercase text-xs md:text-sm font-bold tracking-wide p-3 rounded-lg w-full md:w-1/4 mb-2 md:mb-0 focus:outline-none focus:shadow-outline 
                                         ${selectedSection === 'web' ? 'bg-white text-red-900' : 'bg-red-900 hover:bg-opacity-80 text-gray-100'}`}>
                             Web
                         </button>
                         <button
                             onClick={() => setSelectedSection('data')} 
-                            className={`uppercase text-sm font-bold tracking-wide p-3 rounded-lg w-1/4 focus:outline-none focus:shadow-outline 
+                            className={`uppercase text-xs md:text-sm font-bold tracking-wide p-3 rounded-lg w-full md:w-1/4 mb-2 md:mb-0 focus:outline-none focus:shadow-outline 
                                         ${selectedSection === 'data' ? 'bg-white text-red-900' : 'bg-red-900 hover:bg-opacity-80 text-gray-100'}`}>
                             Data
                         </button>
                         <button
                             onClick={() => setSelectedSection('pm')} 
-                            className={` uppercase text-sm font-bold tracking-wide p-3 mb-3 rounded-lg w-1/2 focus:outline-none focus:shadow-outline 
+                            className={`uppercase text-xs md:text-sm font-bold tracking-wide p-3 rounded-lg w-full md:w-1/4 focus:outline-none focus:shadow-outline
                                         ${selectedSection === 'pm' ? 'bg-white text-red-900' : 'bg-red-900 hover:bg-opacity-80 text-gray-100'}`}>
                             Project Management
                         </button>
@@ -94,14 +98,39 @@ export default function Samples() {
                             <p className="text-gray-700 mt-2">A simple full stack app built with Next.js, Tailwind CSS, and MongoDB, pulling technology and course info form an API.</p>
                             <p className='text-black font-bold text-lg mt-2'>Built with:</p>
                             <div className="flex justify-start flex-wrap mt-4"> 
-                                {['Docker', 'Next.js', 'Tailwind CSS', 'Vercel'].map((tech, index) => (
+                                {['Docker', 'MongoDB', 'Next.js', 'Tailwind CSS', 'Vercel'].map((tech, index) => (
                                     <a key={index} href={techIcons[tech].url} className="m-1 bg-gray-200 hover:bg-gray-300 rounded-full px-4 py-1 text-sm" target="_blank" rel="noopener noreferrer" title={tech}>
-                                        <Icon icon={techIcons[tech].icon} width="20" height="20" />
+                                        <Icon icon={techIcons[tech].icon} width="25" height="25" />
                                     </a>
                                 ))}
                             </div>
                         </div>
-
+                        <div className="bg-white bg-opacity-90 p-6 m-4 rounded-xl shadow-lg w-80 ">
+                            <a href='https://tech-roster-admin-beige.vercel.app/' target="_blank"><img src="/images/webp/techAdmin.webp" alt="Screencap of Project tech roster" className="w-full h-40 object-cover rounded border-2 border-gray-600" /></a>
+                            <h3 className={`text-2xl font-black text-red-800 mt-2 ${cinzel.className}`}>Tech Roster - Admin</h3>
+                            <p className="text-gray-700 mt-2">The admin side of the Tech Roster! A simple full stack app built with Next.js, Tailwind CSS, and MongoDB, allowing CRUD functionality. </p>
+                            <p className='text-black font-bold text-lg mt-2'>Built with:</p>
+                            <div className="flex justify-start flex-wrap mt-4"> 
+                                {['Docker', 'MongoDB', 'Next.js', 'Tailwind CSS', 'Vercel'].map((tech, index) => (
+                                    <a key={index} href={techIcons[tech].url} className="m-1 bg-gray-200 hover:bg-gray-300 rounded-full px-4 py-1 text-sm" target="_blank" rel="noopener noreferrer" title={tech}>
+                                        <Icon icon={techIcons[tech].icon} width="25" height="25" />
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="bg-white bg-opacity-90 p-6 m-4 rounded-xl shadow-lg w-80 ">
+                            <a href='https://photo-album-fullstack.vercel.app/' target='_blank'><img src="/images/webp/photoalbum.webp" alt="Screencap of Project Photo Album" className="w-full h-40 object-cover rounded border-2 border-gray-600" /></a>     
+                            <h3 className={`text-2xl font-black text-red-800 mt-2 ${cinzel.className}`}>Photo Album</h3>
+                            <p className="text-gray-700 mt-2">Full stack photo album, retrieving photos and related info from a MongoDB database, commenting, and jump feature. </p>
+                            <p className='text-black font-bold text-lg mt-2'>Built with:</p>
+                            <div className="flex justify-start flex-wrap mt-4">
+                                {['MongoDB', 'Next.js', 'Tailwind CSS', 'Docker', 'Vercel'].map((tech, index) => (
+                                    <a key={index} href={techIcons[tech].url} className="m-1 bg-gray-200 hover:bg-gray-300 rounded-full px-4 py-1 text-sm" target="_blank" rel="noreferrer" title={tech}>
+                                        <Icon icon={techIcons[tech].icon} width="25" height="25" />
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
                         <div className="bg-white bg-opacity-90 p-6 m-4 rounded-xl shadow-lg w-80 ">
                             <a href='https://year-1-web-build-6.vercel.app/' target='_blank'><img src="/images/webp/webbuild6.webp" alt="Screencap of Project mini portfolio" className="w-full h-40 object-cover rounded border-2 border-gray-600" /></a>
                             <h3 className={`text-2xl font-black text-red-800 mt-2 ${cinzel.className}`}>Mini Portfolio</h3>
@@ -110,19 +139,20 @@ export default function Samples() {
                             <div className="flex justify-start flex-wrap mt-4">
                                 {['HTML', 'CSS', 'Vercel'].map((tech, index) => (
                                     <a key={index} href={techIcons[tech].url} className="m-1 bg-gray-200 hover:bg-gray-300 rounded-full px-4 py-1 text-sm" target="_blank" rel="noopener noreferrer" title={tech}>
-                                        <Icon icon={techIcons[tech].icon} width="20" height="20" />
+                                        <Icon icon={techIcons[tech].icon} width="25" height="25" />
                                     </a>
                                 ))}
                             </div>
                         </div>
                         <div className="bg-white bg-opacity-90 p-6 m-4 rounded-xl shadow-lg w-80 ">
-                        <a href='https://photo-album-fullstack.vercel.app/' target='_blank'><img src="/images/webp/photoalbum.webp" alt="Screencap of Project Photo Album" className="w-full h-40 object-cover rounded border-2 border-gray-600" /></a>
-                            <h3 className="text-2xl font-bold mt-2">Photo Album</h3>
-                            <p className="text-gray-700 mt-2">Full stack photo album, retrieving photos and related info from a MongoDB database, commenting, and jump feature. </p>
+                            <a href='https://year-1-web-build-5.vercel.app/' target='_blank'><img src="/images/webp/Multiculture.webp" alt="Screencap of Project Photo Album" className="w-full h-40 object-cover rounded border-2 border-gray-600" /></a>     
+                            <h3 className={`text-2xl font-black text-red-800 mt-2 ${cinzel.className}`}>Multiculturalism website</h3>
+                            <p className="text-gray-700 mt-2">Collaborative project with another student building a multi-page simple HTML/CSS website for an event. </p>
+                            <p className='text-black font-bold text-lg mt-2'>Built with:</p>
                             <div className="flex justify-start flex-wrap mt-4">
-                                {['MongoDB', 'Next.js', 'Tailwind CSS', 'Docker', 'Vercel'].map((tech, index) => (
-                                    <a key={index} href={techIcons[tech].url} className="m-1 bg-gray-200 hover:bg-gray-300 rounded-full px-4 py-1 text-sm" target="_blank" rel="noreferrer">
-                                        <Icon icon={techIcons[tech].icon} width="20" height="20" />
+                                {['HTML', 'CSS', 'Vercel'].map((tech, index) => (
+                                    <a key={index} href={techIcons[tech].url} className="m-1 bg-gray-200 hover:bg-gray-300 rounded-full px-4 py-1 text-sm" target="_blank" rel="noreferrer" title={tech}>
+                                        <Icon icon={techIcons[tech].icon} width="25" height="25" />
                                     </a>
                                 ))}
                             </div>
@@ -131,17 +161,21 @@ export default function Samples() {
                 )}
 
                 {selectedSection === 'data' && (
-                    <div className="text-center">
-                        <h2 className="text-3xl font-bold">Data Section</h2>
-                        <p>Content for Data section will go here.</p>
+                    <div className="w-3/4 mx-auto">
+
+                        <div className="bg-white bg-opacity-90 rounded-lg p-4">
+                                <p className="text-black text-center ">
+                                    Some cool Power BI and Tableau projects coming soon!
+                                </p>
+                        </div>
                     </div>
-                )}
+                    )}
 
                 {selectedSection === 'pm' && (
                     <div className="w-3/4 mx-auto">
 
-                        <div className="bg-white bg-opacity-60 rounded-lg p-4">
-                            <p className="text-black text-center font-bold">
+                        <div className="bg-white bg-opacity-90 rounded-lg p-4">
+                            <p className="text-black text-center ">
                                 Codeflex 2023 was a Hackaton event organized by myself and 4 other NSCC IT students,
                                 which saw 10 teams of students compete to complete a series of challenges in MySQL, Python and HTML/CSS 
                                 for a chance to win a $100 gift card and bragging rights that they've correctly completed approximately 30 challenges in less than 5 hours

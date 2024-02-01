@@ -2,10 +2,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Cinzel } from 'next/font/google';
 const cinzel = Cinzel({weight: "400", subsets: ['latin']});
+import Head from 'next/head';
 
 export default function About() {
     return (
         <>
+            <Head>
+                <title>About - VS Data & Development</title>
+            </Head>
             <div className="relative h-screen w-full overflow-auto bg-cover bg-center" style={{ backgroundImage: 'url(/images/webp/Banner2.webp)', backgroundAttachment: 'fixed' }}>
                <div className="relative top-0 left-0 right-0 bottom-0 z-10 flex flex-col lg:flex-row">
                     {/* About Me and Headshot */}

@@ -31,11 +31,11 @@ export default function HeroSection() {
               alt="photo of me"
               width={150}
               height={84.38}
-              className="rounded-xl opacity-90 z-10"
+              className="rounded-xl border-white border-2 opacity-90 z-10"
             />
           </div>
           <div className="text-center text-white">
-            <h1 className="text-5xl font-bold mb-4">Victoria Shmakov 3</h1>
+            <h1 className="text-5xl font-bold mb-4">Victoria Shmakov</h1>
             <p className="text-xl">Development and Data</p>
           </div>
         </div>
