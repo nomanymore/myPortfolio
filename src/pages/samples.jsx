@@ -71,7 +71,7 @@ export default function Samples() {
                             onClick={() => setSelectedSection('web')} 
                             className={`uppercase text-xs md:text-sm font-bold tracking-wide p-3 rounded-lg w-full md:w-1/4 mb-2 md:mb-0 focus:outline-none focus:shadow-outline 
                                         ${selectedSection === 'web' ? 'bg-white text-red-900' : 'bg-red-900 hover:bg-opacity-80 text-gray-100'}`}>
-                            Web
+                            Web & Prog
                         </button>
                         <button
                             onClick={() => setSelectedSection('data')} 
@@ -151,6 +151,32 @@ export default function Samples() {
                             <p className='text-black font-bold text-lg mt-2'>Built with:</p>
                             <div className="flex justify-start flex-wrap mt-4">
                                 {['HTML', 'CSS', 'Vercel'].map((tech, index) => (
+                                    <a key={index} href={techIcons[tech].url} className="m-1 bg-gray-200 hover:bg-gray-300 rounded-full px-4 py-1 text-sm" target="_blank" rel="noreferrer" title={tech}>
+                                        <Icon icon={techIcons[tech].icon} width="25" height="25" />
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="bg-white bg-opacity-90 p-6 m-4 rounded-xl shadow-lg w-80 ">
+                            <a href='https://www.online-python.com/6rdNPthazS' target='_blank'><img src="/images/webp/insult.webp" alt="Screencap of Project Photo Album" className="w-full h-40 object-cover rounded border-2 border-gray-600" /></a>     
+                            <h3 className={`text-2xl font-black text-red-800 mt-2 ${cinzel.className}`}>Insult Generator</h3>
+                            <p className="text-gray-700 mt-2">Fun little Python program that takes user input and generates insults. </p>
+                            <p className='text-black font-bold text-lg mt-2'>Built with:</p>
+                            <div className="flex justify-start flex-wrap mt-4">
+                                {['Python'].map((tech, index) => (
+                                    <a key={index} href={techIcons[tech].url} className="m-1 bg-gray-200 hover:bg-gray-300 rounded-full px-4 py-1 text-sm" target="_blank" rel="noreferrer" title={tech}>
+                                        <Icon icon={techIcons[tech].icon} width="25" height="25" />
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="bg-white bg-opacity-90 p-6 m-4 rounded-xl shadow-lg w-80 ">
+                            <a href='https://www.online-python.com/lE52A7NRjb' target='_blank'><img src="/images/webp/numbersGame.webp" alt="Screencap of Project Photo Album" className="w-full h-40 object-cover rounded border-2 border-gray-600" /></a>     
+                            <h3 className={`text-2xl font-black text-red-800 mt-2 ${cinzel.className}`}>Number Guessing Game</h3>
+                            <p className="text-gray-700 mt-2">Python guessing game, asking the user to guess a number between 1-100 and telling them if it's hot or cold. </p>
+                            <p className='text-black font-bold text-lg mt-2'>Built with:</p>
+                            <div className="flex justify-start flex-wrap mt-4">
+                                {['Python'].map((tech, index) => (
                                     <a key={index} href={techIcons[tech].url} className="m-1 bg-gray-200 hover:bg-gray-300 rounded-full px-4 py-1 text-sm" target="_blank" rel="noreferrer" title={tech}>
                                         <Icon icon={techIcons[tech].icon} width="25" height="25" />
                                     </a>

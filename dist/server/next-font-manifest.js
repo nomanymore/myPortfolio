@@ -3,7 +3,7 @@ self.__NEXT_FONT_MANIFEST={
     "/_app": [
       "static/media/691c82720da7567e-s.p.woff2"
     ],
-    "/about": [
+    "/samples": [
       "static/media/691c82720da7567e-s.p.woff2"
     ]
   },
