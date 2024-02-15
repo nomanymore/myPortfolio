@@ -16,7 +16,7 @@ export default function Experience() {
                     {/* Experience Image */}
                     <div className="w-full lg:w-1/3 h-1/3 flex flex-col items-center justify-center ">
                         <h1 className={`text-5xl font-bold mb-4 text-white ${cinzel.className}`}>Experience</h1>
-                        <a href="/CV IT 2024.pdf" download>
+                        <a href="/MyCV2024.pdf" download>
                             <button className={`bg-red-900 hover:bg-opacity-80 text-white font-bold text-lg py-2 px-4 rounded-md`}>
                                 Download Resume
                             </button>
