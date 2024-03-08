@@ -186,9 +186,9 @@ export default function Samples() {
                     </div>
                 )}
 
-                {selectedSection === 'data' && (
-                    <div className="w-85% mx-auto">
-                        <div className="bg-white bg-opacity-90 p-4 m-4 rounded-xl shadow-lg w-1/2 ">
+                        {selectedSection === 'data' && (
+                            <div className="flex justify-around mx-auto">
+                                <div className="bg-white bg-opacity-90 p-4 m-4 rounded-xl shadow-lg w-1/2">
                             <iframe title="NY resolutions" width="493" height="228" src="https://app.powerbi.com/view?r=eyJrIjoiOWVmMWE2OGQtMDExMC00N2RmLTk1YTEtOWQ2Mzc2MTA5NWQyIiwidCI6IjlmMjlkOTFmLWYzM2EtNGY4NC05ZDU2LWE0NGQ4ODk0YTA0NiJ9&embedImagePlaceholder=true&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
                             <h3 className={`text-2xl font-black text-red-800 mt-2 ${cinzel.className}`}>NY Resolutions</h3>
                             <p className="text-gray-700 mt-2">Simple Visualization showing New Year resolutions of UK population by gender and age groups. Done as part of a challenge obtained from <a href="workout-wednesday.com"> workout-wednesday.com</a> </p>
@@ -201,7 +201,7 @@ export default function Samples() {
                                 ))}
                             </div>
                         </div>
-                        <div className="bg-white bg-opacity-90 p-4 m-4 rounded-xl shadow-lg w-1/2 ">
+                        <div className="bg-white bg-opacity-90 p-4 m-4 rounded-xl shadow-lg w-1/2">
                         <iframe title="IT job fair" width="493" height="228" src="https://app.powerbi.com/view?r=eyJrIjoiY2M2YzA4YjQtYjAzYS00YmIwLTgyMDMtOGIyYWQxMGQ1M2I3IiwidCI6IjlmMjlkOTFmLWYzM2EtNGY4NC05ZDU2LWE0NGQ4ODk0YTA0NiJ9" frameborder="0" allowFullScreen="true"></iframe>
                             <h3 className={`text-2xl font-black text-red-800 mt-2 ${cinzel.className}`}>Halifax IT job fair 2023</h3>
                             <p className="text-gray-700 mt-2">A visualization analyzing the companies attending the Halifax IT job fair, number of available positions and types of positions offered to help me navigate the job fair better. </p>
