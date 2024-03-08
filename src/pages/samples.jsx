@@ -190,6 +190,7 @@ export default function Samples() {
                     <div className="w-3/4 mx-auto">
                         <div className="bg-white bg-opacity-90 p-6 m-4 rounded-xl shadow-lg w-80 ">
                             <a href='https://app.powerbi.com/view?r=eyJrIjoiOWVmMWE2OGQtMDExMC00N2RmLTk1YTEtOWQ2Mzc2MTA5NWQyIiwidCI6IjlmMjlkOTFmLWYzM2EtNGY4NC05ZDU2LWE0NGQ4ODk0YTA0NiJ9&embedImagePlaceholder=true&pageName=ReportSection' target="_blank"><img src="/images/NYresolutions.png" alt="Screencap of Project tech roster" className="w-full h-40 object-cover rounded border-2 border-gray-600" /></a>
+                            <iframe title="NY resolutions" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiOWVmMWE2OGQtMDExMC00N2RmLTk1YTEtOWQ2Mzc2MTA5NWQyIiwidCI6IjlmMjlkOTFmLWYzM2EtNGY4NC05ZDU2LWE0NGQ4ODk0YTA0NiJ9&embedImagePlaceholder=true&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
                             <h3 className={`text-2xl font-black text-red-800 mt-2 ${cinzel.className}`}>NY Resolutions</h3>
                             <p className="text-gray-700 mt-2">Simple Visualization showing New Year resolutions of UK population by gender and age groups. Done as part of a challenge obtained from workout-wednesday.com </p>
                             <p className='text-black font-bold text-lg mt-2'>Built with:</p>
