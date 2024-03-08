@@ -200,7 +200,19 @@ export default function Samples() {
                                     </a>
                                 ))}
                             </div>
-                        
+                        </div>
+                        <div className="bg-white bg-opacity-90 p-6 m-4 rounded-xl shadow-lg w-1/2 ">
+                        <iframe title="IT job fair" width="493" height="228" src="https://app.powerbi.com/view?r=eyJrIjoiY2M2YzA4YjQtYjAzYS00YmIwLTgyMDMtOGIyYWQxMGQ1M2I3IiwidCI6IjlmMjlkOTFmLWYzM2EtNGY4NC05ZDU2LWE0NGQ4ODk0YTA0NiJ9" frameborder="0" allowFullScreen="true"></iframe>
+                            <h3 className={`text-2xl font-black text-red-800 mt-2 ${cinzel.className}`}>Halifax IT job fair 2023</h3>
+                            <p className="text-gray-700 mt-2">A visualization analyzing the companies attending the Halifax IT job fair, number of available positions and types of positions offered to help me navigate the job fair better. </p>
+                            <p className='text-black font-bold text-lg mt-2'>Built with:</p>
+                            <div className="flex justify-start flex-wrap mt-4"> 
+                                {['Power BI'].map((tech, index) => (
+                                    <a key={index} href={techIcons[tech].url} className="m-1 bg-gray-200 hover:bg-gray-300 rounded-full px-4 py-1 text-sm" target="_blank" rel="noopener noreferrer" title={tech}>
+                                        <Icon icon={techIcons[tech].icon} width="25" height="25" />
+                                    </a>
+                                ))}
+                            </div>
                         </div>
                     </div>
                     )}
