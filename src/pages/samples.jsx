@@ -43,6 +43,7 @@ export default function Samples() {
         'WordPress': { icon:'skill-icons:wordpress', url:'https://wordpress.com/' },
         'Docker': { icon:'skill-icons:docker', url:'https://www.docker.com/' },
         'ASP.NET': { icon:'devicon:dotnetcore', url:'https://dotnet.microsoft.com/en-us/' },
+        'AWS': { icon:'fa6-brands:aws', url:'https://aws.amazon.com/' },
     };
 
     const handleSlideChange = (increment) => {
@@ -98,7 +99,7 @@ export default function Samples() {
                             <p className="text-gray-700 mt-2">A job board app written in vanilla PHP that pulls jobs from an API, displays them if the admin is signed in and allows a user to apply for a job. Sign in credentials to test the app: email: ryan.mclaren@nscc.ca pass:admin deployed using AWS</p>
                             <p className='text-black font-bold text-lg mt-2'>Built with:</p>
                             <div className="flex justify-start flex-wrap mt-4"> 
-                                {['Docker', 'MySQL', 'php', 'Tailwind CSS', 'Vercel'].map((tech, index) => (
+                                {['Docker', 'MySQL', 'php', 'Tailwind CSS', 'AWS'].map((tech, index) => (
                                     <a key={index} href={techIcons[tech].url} className="m-1 bg-gray-200 hover:bg-gray-300 rounded-full px-4 py-1 text-sm" target="_blank" rel="noopener noreferrer" title={tech}>
                                         <Icon icon={techIcons[tech].icon} width="25" height="25" />
                                     </a>
