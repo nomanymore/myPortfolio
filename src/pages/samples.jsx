@@ -93,6 +93,19 @@ export default function Samples() {
                 {selectedSection === 'web' && (
                     <div className="flex flex-wrap justify-center ">
                         <div className="bg-white bg-opacity-90 p-6 m-4 rounded-xl shadow-lg w-80 ">
+                            <a href='http://52.73.113.32/login' target="_blank"><img src="/images/webp/jobBoard.webp" alt="Screencap of Project tech roster" className="w-full h-40 object-cover rounded border-2 border-gray-600" /></a>
+                            <h3 className={`text-2xl font-black text-red-800 mt-2 ${cinzel.className}`}>Job Board</h3>
+                            <p className="text-gray-700 mt-2">A job board app written in vanilla PHP that pulls jobs from an API, displays them if the admin is signed in and allows a user to apply for a job. Sign in credentials to test the app: email: ryan.mclaren@nscc.ca pass:admin deployed using AWS</p>
+                            <p className='text-black font-bold text-lg mt-2'>Built with:</p>
+                            <div className="flex justify-start flex-wrap mt-4"> 
+                                {['Docker', 'MySQL', 'php', 'Tailwind CSS', 'Vercel'].map((tech, index) => (
+                                    <a key={index} href={techIcons[tech].url} className="m-1 bg-gray-200 hover:bg-gray-300 rounded-full px-4 py-1 text-sm" target="_blank" rel="noopener noreferrer" title={tech}>
+                                        <Icon icon={techIcons[tech].icon} width="25" height="25" />
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="bg-white bg-opacity-90 p-6 m-4 rounded-xl shadow-lg w-80 ">
                             <a href='https://tech-roster-vercel.vercel.app/' target="_blank"><img src="/images/TechRoster.png" alt="Screencap of Project tech roster" className="w-full h-40 object-cover rounded border-2 border-gray-600" /></a>
                             <h3 className={`text-2xl font-black text-red-800 mt-2 ${cinzel.className}`}>Tech Roster</h3>
                             <p className="text-gray-700 mt-2">A simple full stack app built with Next.js, Tailwind CSS, and MongoDB, pulling technology and course info form an API.</p>
